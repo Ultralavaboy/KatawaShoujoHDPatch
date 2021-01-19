@@ -1,0 +1,357 @@
+# Copyright 2004-2008 PyTom <pytom@bishoujo.us>
+# See LICENSE.txt for license details.
+
+init python hide:
+
+    style.menu_button = Style(style.button, heavy=True, help='Buttons that are part of the main or game menus.')
+    style.menu_button_text = Style(style.button_text, heavy=True, help='The label of buttons that are part of the main or game menus.')
+    
+    style.thin_hbox = Style(style.hbox, heavy=True, help='A hbox with a small amount of spacing.')
+    style.thick_hbox = Style(style.hbox, heavy=True, help='A hbox with a large amount of spacing.')
+    style.thin_vbox = Style(style.vbox, heavy=True, help='A vbox with a small amount of spacing.')
+    style.thick_vbox = Style(style.vbox, heavy=True, help='A vbox with a large amount of spacing.')
+
+    style.mm_menu_frame = Style(style.default, heavy=True, help='The frame containing the main menu.')
+    style.mm_menu_frame_vbox = Style(style.thin_vbox, heavy=True, help='The vbox containing the main menu.')
+    style.mm_button = Style(style.menu_button, heavy=True, help='A main menu button.')
+    style.mm_button_text = Style(style.menu_button_text, heavy=True, help='A main menu button label.')
+    style.default.drop_shadow = (1, 1)
+
+    style.gm_nav_frame = Style(style.default, heavy=True, help='The frame containing the navigation buttons.')
+    style.gm_nav_vbox = Style(style.thin_vbox, heavy=True, help='The vbox containing the navigation buttons.')
+    style.gm_nav_button = Style(style.menu_button, heavy=True, help='A navigation button.')
+    style.gm_nav_button_text = Style(style.menu_button_text, heavy=True, help='A navigation button label.')
+
+    style.file_picker_entry = Style(style.menu_button, heavy=True, help='A button you click to save or load a file.')
+    style.file_picker_entry_box = Style(style.thin_hbox, heavy=True, help='The box inside that button.')
+    style.file_picker_text = Style(style.default, heavy=True, help='Base style for text inside a file picker entry.')
+    style.file_picker_new = Style(style.file_picker_text, heavy=True, help='The number of the newest file.')
+    style.file_picker_old = Style(style.file_picker_text, heavy=True, help='The number of non-newest files.')
+    style.file_picker_extra_info = Style(style.file_picker_text, heavy=True, help='Extra text (the date and save info) of a file.')
+    style.file_picker_empty_slot = Style(style.file_picker_text, heavy=True, help='The style of "Empty Slot" text.')
+    style.file_picker_frame = Style(style.default, heavy=True, help='The frame containing the file picker.')
+    style.file_picker_frame_vbox = Style(style.thin_vbox, heavy=True, help='The box containing file picker navigation and the file picker grid.')
+    style.file_picker_navbox = Style(style.thick_hbox, heavy=True, help='The box containing the file picker navigation buttons.')
+    style.file_picker_nav_button = Style(style.menu_button, heavy=True, help='A file picker navigation button.')
+    style.file_picker_nav_button_text = Style(style.menu_button_text, heavy=True, help='A file picker navigation button label.')
+    style.file_picker_grid = Style(style.default, heavy=True, help='The grid containing the entries in the file picker.')
+
+    style.yesno_frame = Style(style.default, heavy=True, help='The frame containing the yes/no dialog.')
+    style.yesno_frame_vbox = Style(style.thick_vbox, heavy=True, help='Separates the label from the buttons in a yes/no dialog.')
+    style.yesno_label = Style(style.default, heavy=True, help='The label of a yes/no dialog.')
+    style.yesno_button_hbox = Style(style.thick_hbox, heavy=True, help="The box containing the Yes and No buttons.")
+    style.yesno_button = Style(style.menu_button, heavy=True, help='A Yes/No button.')
+    style.yesno_button_text = Style(style.menu_button_text, heavy=True, help='A Yes/No button label.')
+
+
+    style.prefs_frame = Style(style.default, heavy=True, help='')
+    style.prefs_pref_frame = Style(style.default, heavy=True, help='')
+    style.prefs_pref_vbox = Style(style.thin_vbox, heavy=True, help='')
+    style.prefs_label = Style(style.default, heavy=True, help='')
+    style.prefs_hbox = Style(style.default, heavy=True, help='')
+    style.prefs_button = Style(style.menu_button, heavy=True, help='')
+    style.prefs_button_text = Style(style.menu_button_text, heavy=True, help='')
+    style.soundtest_button = Style(style.prefs_button, heavy=True, help='')
+    style.soundtest_button_text = Style(style.prefs_button_text, heavy=True, help='')
+    style.prefs_slider = Style(style.bar, heavy=True, help='')
+    style.prefs_volume_slider = Style(style.prefs_slider, heavy=True, help='')
+    style.prefs_spinner = Style(style.default, heavy=True, help='')
+    style.prefs_spinner_label = Style(style.prefs_label, heavy=True, help='')
+    style.prefs_spinner_button = Style(style.prefs_button, heavy=True, help='')
+    style.prefs_spinner_button_text = Style(style.prefs_button_text, heavy=True, help='')
+    style.prefs_js_frame = Style(style.prefs_pref_frame, heavy=True, help='')
+    style.prefs_js_vbox = Style(style.prefs_pref_vbox, heavy=True, help='')
+    style.prefs_js_button = Style(style.prefs_button, heavy=True, help='')
+    style.prefs_js_button_text = Style(style.prefs_button_text, heavy=True, help='')
+    style.js_frame = Style(style.prefs_frame, heavy=True, help='')
+    style.js_frame_vbox = Style(style.thick_vbox, heavy=True, help='')
+    style.js_function_label = Style(style.prefs_label, heavy=True, help='')
+    style.js_prompt_label = Style(style.prefs_label, heavy=True, help='')
+    style.prefs_jump = Style(style.prefs_pref_frame, heavy=True, help='')
+    style.prefs_jump_button = Style(style.prefs_button, heavy=True, help='')
+    style.prefs_jump_button_text = Style(style.prefs_button_text, heavy=True, help='')
+    style.prefs_column = Style(style.default, heavy=True, help='')
+    style.prefs_left = Style(style.prefs_column, heavy=True, help='')
+    style.prefs_center = Style(style.prefs_column, heavy=True, help='')
+    style.prefs_right = Style(style.prefs_column, heavy=True, help='')
+    style.prefs_joystick = Style(style.prefs_center, heavy=True, help='')
+
+    style.thin_hbox.spacing = 3
+    style.thick_hbox.spacing = 30
+    style.thin_vbox.spacing = 0
+    style.thick_vbox.spacing = 30
+
+    dark_cyan = (0, 192, 255, 255)
+    bright_cyan = (0, 255, 255, 255)
+    dark_red = (255, 128, 128, 255)
+    bright_red = (255, 64, 64, 255)
+    green = (0, 128, 0, 255)
+
+    # Frames.
+    style.frame.background = Solid((0, 0, 128, 128))
+    style.frame.xpadding = 10
+    style.frame.ypadding = 5
+    style.frame.xmargin = 10
+    style.frame.ymargin = 5
+
+
+    ######################################################################
+    # Buttons.
+
+    style.button_text.color = dark_cyan
+    style.button_text.hover_color = bright_cyan
+    style.button_text.insensitive_color = (192, 192, 192, 255)
+    style.button_text.size = 24
+    style.button_text.drop_shadow = (2, 2)        
+
+    style.button_text.selected_color = dark_red
+    style.button_text.selected_hover_color = bright_red
+
+    style.button_text.xpos = 0.5
+    style.button_text.xanchor = 0.5
+
+    style.menu_button.xpos = 0.5
+    style.menu_button.xanchor = 0.5
+
+
+    ######################################################################
+    # Bar.
+
+    style.bar.ymaximum = 22
+
+    style.bar.left_bar = Solid(bright_cyan)
+    style.bar.right_bar = Solid((0, 0, 0, 128))
+    style.bar.bottom_bar = Solid(bright_cyan)
+    style.bar.top_bar = Solid((0, 0, 0, 128))
+    style.bar.left_gutter = 0
+    style.bar.right_gutter = 0
+    style.bar.thumb = None
+    style.bar.thumb_offset = 0
+    style.bar.thumb_shadow = None
+
+    style.vbar.xmaximum = 22
+
+    style.vbar.left_bar = Solid(bright_cyan)
+    style.vbar.right_bar = Solid((0, 0, 0, 128))
+    style.vbar.bottom_bar = Solid(bright_cyan)
+    style.vbar.top_bar = Solid((0, 0, 0, 128))
+    style.vbar.left_gutter = 0
+    style.vbar.right_gutter = 0
+    style.vbar.bottom_gutter = 0
+    style.vbar.top_gutter = 0
+    style.vbar.thumb = None
+    style.vbar.thumb_offset = 0
+    style.vbar.thumb_shadow = None
+
+    style.vscrollbar.set_parent(style.vbar)
+    style.scrollbar.set_parent(style.bar)
+    
+    style.vscrollbar.bottom_bar = Solid((0, 0, 0, 128))        
+    style.vscrollbar.top_bar = Solid(bright_cyan) 
+
+    style.slider.ymaximum = 1
+    style.vslider.xmaximum = 1
+    
+    ######################################################################
+    # Main menu.
+
+    style.mm_menu_frame.xpos = 0.9
+    style.mm_menu_frame.xanchor = 1.0
+    style.mm_menu_frame.ypos = 0.9
+    style.mm_menu_frame.yanchor = 1.0
+
+
+    ######################################################################
+    # Game menu common.
+
+    style.gm_nav_frame.xpos = 0.95
+    style.gm_nav_frame.xanchor = 1.0
+    style.gm_nav_frame.ypos = 0.95
+    style.gm_nav_frame.yanchor = 1.0
+
+
+    ##############################################################################
+    # File picker.
+
+    style.file_picker_frame.xpos = 0
+    style.file_picker_frame.xanchor = 0.0
+    style.file_picker_frame.ypos = 0
+    style.file_picker_frame.yanchor = 0.0
+    style.file_picker_frame.xpadding = 5
+
+    style.file_picker_navbox.xpos = 10
+
+    style.file_picker_grid.xfill = True
+
+    style.file_picker_entry.xpadding = 5
+    style.file_picker_entry.ypadding = 2
+    style.file_picker_entry.xmargin = 5
+    style.file_picker_entry.xfill = True
+    style.file_picker_entry.ymargin = 2        
+    style.file_picker_entry.background = Solid((255, 255, 255, 255))
+    style.file_picker_entry.hover_background = Solid((255, 255, 192, 255))
+
+    style.file_picker_text.size = 16
+    style.file_picker_text.color = dark_cyan
+    style.file_picker_text.hover_color = bright_cyan
+
+    style.file_picker_new.hover_color = bright_red
+    style.file_picker_new.idle_color = dark_red
+
+    style.file_picker_new.minwidth = 40
+    style.file_picker_old.minwidth = 40
+
+    style.file_picker_new.text_align = 1.0
+    style.file_picker_old.text_align = 1.0
+
+
+    ######################################################################
+    # Yes/No Dialog
+
+    style.yesno_label.color = green
+    style.yesno_label.textalign = 0.5
+    style.yesno_label.xpos = 0.5
+    style.yesno_label.xanchor = 0.5
+
+    style.yesno_frame.xfill = True
+    style.yesno_frame.yminimum = 0.5
+    style.yesno_frame.xmargin = .1
+
+    style.yesno_frame_vbox.xpos = 0.5
+    style.yesno_frame_vbox.xanchor = 0.5
+    style.yesno_frame_vbox.ypos = 0.5
+    style.yesno_frame_vbox.yanchor = 0.5
+
+    style.yesno_button_hbox.xalign = 0.5
+    style.yesno_button_hbox.spacing = 100
+    
+    ##############################################################################
+    # Preferences.
+
+
+    style.prefs_pref_frame.xpos = 0.5
+    style.prefs_pref_frame.xanchor = 0.5
+    style.prefs_pref_frame.bottom_margin = 10
+
+    style.prefs_label.xpos = 0.5
+    style.prefs_label.xanchor = 0.5
+    style.prefs_label.color = green
+
+    style.prefs_slider.xmaximum=200
+    style.prefs_slider.ymaximum=22
+    style.prefs_slider.xpos = 0.5
+    style.prefs_slider.xanchor = 0.5
+
+    style.prefs_hbox.xpos = 0.5
+    style.prefs_hbox.xanchor = 0.5
+
+    style.prefs_button.xpos = 0.5
+    style.prefs_button.xanchor = 0.5
+
+    style.prefs_button.selected_xpos = 0.5
+    style.prefs_button.selected_xanchor = 0.5
+
+    style.prefs_frame.xfill=True
+    style.prefs_frame.ypadding = 0.05
+
+    style.prefs_column.spacing = 6
+
+    style.prefs_left.xanchor = 0.5
+    style.prefs_left.xpos = 1.0 / 6.0
+
+    style.prefs_center.xanchor = 0.5
+    style.prefs_center.xpos = 3.0 / 6.0
+
+    style.prefs_right.xanchor = 0.5
+    style.prefs_right.xpos = 5.0 / 6.0
+
+    style.prefs_spinner.xpos = 0.5
+    style.prefs_spinner.xanchor = 0.5
+
+    style.prefs_spinner_label.minwidth = 100
+    style.prefs_spinner_label.textalign = 0.5
+
+    style.prefs_js_button_text.size = 18
+    style.prefs_js_button_text.drop_shadow = (1, 1)
+
+    style.js_function_label.textalign = 0.5
+    style.js_prompt_label.textalign = 0.5
+
+    style.js_frame.xfill = True
+    style.js_frame.yminimum = 0.5
+    style.js_frame.xmargin = .1
+
+    style.js_frame_vbox.xpos = 0.5
+    style.js_frame_vbox.xanchor = 0.5
+    style.js_frame_vbox.ypos = 0.5
+    style.js_frame_vbox.yanchor = 0.5
+
+    style.soundtest_button.activate_sound = None
+
+    style.window.background = Solid((0, 0, 128, 128))
+    style.window.xpadding = 10
+    style.window.ypadding = 5
+    style.window.xmargin = 10
+    style.window.ymargin = 5
+    style.window.xfill = True
+    style.window.yfill = False
+    style.window.xminimum = 0 # Includes margins and padding.
+    style.window.yminimum = 150 # Includes margins and padding.
+
+
+    
+    ######################################################################
+    # Compatibility names for renamed styles.
+    style.file_picker_window_vbox = style.file_picker_frame_vbox
+    style.prefs_window = style.prefs_frame
+    style.mm_root_window = style.mm_root
+    style.file_picker_window = style.file_picker_frame
+    style.prefs_pref = style.prefs_pref_frame
+    style.gm_root_window = style.gm_root
+    style.yesno_window_vbox = style.yesno_frame_vbox
+    style.joyprompt_label = style.js_prompt_label
+    style.gm_nav_window = style.gm_nav_frame
+    style.joy_window = style.js_frame
+    style.mm_menu_window = style.mm_menu_frame
+    style.error_window = style.error_root
+    style.joyfunc_label = style.js_function_label
+    style.joy_vbox = style.js_frame_vbox
+    style.yesno_window = style.yesno_frame
+    style.mm_menu_window_vbox = style.mm_menu_frame_vbox
+    style.menu_choice_button_text = style.menu_choice
+    style.menu_choice_chosen_button_text = style.menu_choice_chosen
+
+    store._selected_compat = [ ]
+
+    class _SelectedCompat(object):
+
+        def __init__(self, target):
+            self.__dict__["target"] = target
+            self.__dict__["property_updates"] = [ ]
+
+            store._selected_compat.append(self)
+
+        def __setattr__(self, k, v):
+            self.property_updates.append((k, v))
+
+        def apply(self):
+            target = getattr(style, self.target)
+            for k, v in self.property_updates:
+                setattr(target, "selected_" + k, v)
+
+        def clear(self):
+            self.__dict__["property_updates"] = [ ]
+
+
+    style.selected_button = _SelectedCompat('button')
+    style.selected_button_text = _SelectedCompat('button_text')
+    style.gm_nav_selected_button = _SelectedCompat('gm_nav_button')
+    style.gm_nav_selected_button_text = _SelectedCompat('gm_nav_button_text')
+    style.prefs_selected_button = _SelectedCompat('prefs_button')
+    style.prefs_selected_button_text = _SelectedCompat('prefs_button_text')
+    
+    def apply_selected_compat():
+        for scs in _selected_compat:
+            scs.apply()
+
+    layout.compat_funcs.append(apply_selected_compat)

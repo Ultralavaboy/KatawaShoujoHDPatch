@@ -1,0 +1,3 @@
+init -1000 python:
+    if not persistent.current_language:
+        persistent.current_language = "es"
