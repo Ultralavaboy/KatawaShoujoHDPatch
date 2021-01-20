@@ -27,6 +27,11 @@ This wideness of an original image happens because of stretching window from 4:3
 
 ![](https://i.imgur.com/nXreBJw.jpg)
 
+## Download
+
+The game can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
+(By the way, original novel was downloaded [here](https://www.katawa-shoujo.com/)).
+
 ## History
 
 As I said above, the official game is available only in quite low resolution, so I’ve decided to make a remastered version of Katawa Shoujo for modern FullHD displays.
@@ -38,7 +43,8 @@ It took about one month of almost every evening of upscaling, adjusting, image e
 
 ## License
 
-This project was made for non-commercial use. I am not developer or owner of the rights for Katawa Shoujo. All rights to published pictures and music belong to their authors or legal owners. Everything else can be found in LICENSE.txt and Game Manual.pdf files. If you're a right owner and have problems with stuff in project, email me: <quackgamer26@gmail.com>.
+This project was made for non-commercial use. I am not developer or owner of the rights for Katawa Shoujo. All rights to published pictures and music belong to their authors or legal owners. Everything else can be found in LICENSE.txt and Game Manual.pdf files.  
+If you're a right owner and have problems with stuff in project, email me: <quackgamer26@gmail.com>.
 
 ## Arigatou’s
 
