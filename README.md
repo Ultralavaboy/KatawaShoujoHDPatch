@@ -1,6 +1,6 @@
 # Katawa Shoujo HD
 
-Remastered version of visual novel Katawa Shoujo.  
+Unofficial remastered version of visual novel Katawa Shoujo.  
 ![](https://i.imgur.com/A9IM5CN.png)
 
 ## Description
@@ -43,7 +43,7 @@ It took about one month of almost every evening of upscaling, adjusting, image e
 
 ## License
 
-This project was made for non-commercial use. I am not developer or owner of the rights for Katawa Shoujo. All rights to published pictures and music belong to their authors or legal owners. Everything else can be found in LICENSE.txt and Game Manual.pdf files.  
+This project is unofficial and it was made for non-commercial use. I am not developer or owner of the rights for Katawa Shoujo. All rights to published pictures and music belong to their authors or legal owners. Everything else can be found in LICENSE.txt and Game Manual.pdf files.  
 If you're a right owner and have problems with stuff in project, email me: <quackgamer26@gmail.com>.
 
 ## Arigatou’s
