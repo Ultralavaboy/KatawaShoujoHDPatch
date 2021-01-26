@@ -60,4 +60,4 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 ## Feedback
 
-If you noticed a bug/mistake, caught a traceback or have any suggestions, you can email me on <quackgamer26@gmail.com> with tag "Katawa Feedback".
+If you noticed a bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <quackgamer26@gmail.com> with tag "Katawa Feedback".
