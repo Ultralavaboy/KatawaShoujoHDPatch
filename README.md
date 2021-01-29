@@ -1,6 +1,6 @@
-# Katawa Shoujo HD
+# Katawa Shoujo HD Patch
 
-Unofficial remastered version of visual novel Katawa Shoujo.  
+Unofficial HD patch for visual novel Katawa Shoujo.  
 ![](https://i.imgur.com/A9IM5CN.png)
 
 ## Description
@@ -9,13 +9,13 @@ Katawa Shoujo is a visual novel by Four Leaf Studios that tells the story of a y
 The game has been in development from 2007, and it was released in January 4, 2012. It was quite a long time ago, wasn’t it?  
 The official game is available only in resolution 800x600. It’s actually not that good for *visual* novel in ~~2020~~ 2021.
 
-Remastered Katawa Shoujo is the same (g)old story but in a new HD shell.
+Katawa Shoujo HD patch is going to give this (g)old story a HD shell.
 
 __Enjoy a good story in a good quality!__
 
 ## Comparison
 
-Screenshots below are presented in their original size - 1920x1080 (remastered) and 800x600 (original).
+Screenshots below are presented in their original size - 1920x1080 (with patch) and 800x600 (original).
 
 ![](https://i.imgur.com/HbQRSWU.jpg)
 
@@ -29,10 +29,11 @@ This wideness of an original image happens because of stretching window from 4:3
 
 ## Download
 
-The game can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
-(By the way, original novel was downloaded [here](https://www.katawa-shoujo.com/)).
+The patch can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
+Original novel can be downloaded [here](https://www.katawa-shoujo.com/).
 
 ## History
+(History section is a little bit irreleveant, I'm going to update it in future)
 
 As I said above, the official game is available only in quite low resolution, so I’ve decided to make a remastered version of Katawa Shoujo for modern FullHD displays.
 
@@ -52,7 +53,7 @@ Firstly I want to thank **Four Leaf Studios** for this awesome visual novel.
 
 Also I thank GitHub user [nagadomi](https://github.com/nagadomi) for [waifu2x](https://github.com/nagadomi/waifu2x), it really helped me a lot. 
 
-Thanks to a group of translators Novellae Subs, I used a Russian translation made by them.
+Thanks to a group of translators **Novellae Subs**, I used the Russian patch made by them.
 
 And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafitte/) for inspiration.
 
