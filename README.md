@@ -29,7 +29,8 @@ This wideness of an original image happens because of stretching window from 4:3
 
 ## Download
 
-The patch can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
+The game with patch can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
+The patch itself will be available a little later.
 Original novel can be downloaded [here](https://www.katawa-shoujo.com/).
 
 ## History
