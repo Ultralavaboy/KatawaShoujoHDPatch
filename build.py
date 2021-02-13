@@ -22,15 +22,7 @@ else:
 			break
 		print("Invalid directory entered.")
 
-print("Found the game files at:",path)
-
-#Exract the rpa file
-if not os.path.exists("rpaExtract.exe"):
-	print("You need to drop rpaExtract into the same directory as the build script for it to work.")
-	print("You can find rpaExtract at https://iwanplays.itch.io/rpaex")
-	raise Exception("rpaExtract not found")
-
-print("Found rpaExtract")
+print("Found the game files at:", path)
 
 #Copy the base game files to the output directory
 copy_tree(path, out_dir)
@@ -40,20 +32,21 @@ print("Copied base game files")
 #Hand the call to rpaExtract to wine if not on windows
 user_os = platform.system()
 
-rpa_path = os.path.join(path,'game/data.rpa')
+rpa_path = os.path.join(path, 'game/data.rpa')
 extract_path = os.path.join(out_dir, 'game')
 
 if user_os == "Windows":
-	subprocess.call(['rpaExtract.exe', rpa_path, '-o', extract_path])
+	subprocess.call(['rpatool.exe', '-x', rpa_path, '-o', extract_path])
 else:
-	subprocess.call(['wine', 'rpaExtract.exe', rpa_path, '-o', extract_path])
+	subprocess.call(['wine', 'rpatool.exe', '-x', rpa_path, '-o', extract_path])
 
 print("Extracted rpa")
 
 #Remove the rpa
-os.remove(os.path.join(out_dir,"game/data.rpa"))
+os.remove(os.path.join(out_dir, "game/data.rpa"))
 
 print("Removed redundant files")
 
-copy_tree(patch_dir,out_dir)
-print("Patched the game files, the game is now playable in the folder",out_dir,"by running KatawaShoujo.exe")
+copy_tree(patch_dir, out_dir)
+print("Patched the game files, the game is now playable in the folder", out_dir, "by running KatawaShoujo.exe")
+input()
