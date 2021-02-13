@@ -100,7 +100,7 @@ class Patch(QWidget):
     # Check for existence of "Katawa Shoujo.exe" in current directory
     def check_exe(self):
         global inst_dir
-        if not os.path.isfile(inst_dir+"\Katawa Shoujo.exe"):
+        if not os.path.isfile(os.path.join(inst_dir,"Katawa Shoujo.exe")):
             self.btn.setEnabled(False)
             QMessageBox.about(self, 'Warning', 'Could not find "Katawa Shoujo.exe".'
                                                '\nMake sure you have chosen the correct folder.')
