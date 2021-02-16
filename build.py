@@ -6,6 +6,7 @@ from distutils.dir_util import copy_tree
 
 default_dir = "C:\Program Files (x86)\Katawa Shoujo"
 patch_dir = "KatawaShoujoHD"
+languages_dir = "Languages"
 out_dir = "bin"
 
 #Determine the base game install path
@@ -46,7 +47,16 @@ print("Extracted rpa")
 os.remove(os.path.join(out_dir, "game/data.rpa"))
 
 print("Removed redundant files")
+	
 
 copy_tree(patch_dir, out_dir)
 print("Patched the game files, the game is now playable in the folder", out_dir, "by running KatawaShoujo.exe")
+
+russian = input("Install the Russian patch? (Y/N)")
+
+if russian.lower() == 'y':
+	copy_tree(os.path.join(languages_dir,"Russian"), out_dir)
+	print("Installed Russian patch")
+
+print("Installation complete")
 input()
