@@ -11,6 +11,7 @@ from PyQt5.QtCore import *
 
 inst_dir = "C:\Program Files (x86)\Katawa Shoujo"
 patch_dir = "KatawaShoujoHD"
+languages_dir = "Languages"
 out_dir = "dist"
 
 
@@ -70,6 +71,11 @@ class Patch(QWidget):
         self.pth.setText(inst_dir)
         self.pth.setGeometry(41, 174, 240, 21)
 
+        # checkbox RUS
+        self.cb = QCheckBox('Install Russian', self)
+        self.cb.toggle()
+        self.cb.move(140, 206)
+
         # "Browse" button
         self.cbtn = QPushButton('Browse', self)
         self.cbtn.move(290, 173)
@@ -89,6 +95,7 @@ class Patch(QWidget):
         self.setWindowTitle("Katawa Shoujo HD Patch")
         self.show()
 
+
     # Selecting folder function
     def select_folder(self):
         global inst_dir
@@ -96,6 +103,7 @@ class Patch(QWidget):
         print(inst_dir)
         self.pth.setText(inst_dir)
         self.check_exe()
+
 
     # Check for existence of "Katawa Shoujo.exe" in current directory
     def check_exe(self):
@@ -107,14 +115,16 @@ class Patch(QWidget):
         else:
             self.btn.setEnabled(True)
 
+
     # Main patching method
     def bongiorno(self):
         global inst_dir
         path = inst_dir
 
         # "It may take a few minutes" label appear
-        self.lbl2.setText('Do not close the installer window.\nAn installation may take a few minutes.')
+        self.lbl2.setText('Do not close the installer until the installation \nis complete. It may take a few minutes.')
         self.lbl2.adjustSize()
+        self.cb.hide()
 
         self.statuslbl.setText("Found the base game files...")
         self.statuslbl.adjustSize()
@@ -152,10 +162,21 @@ class Patch(QWidget):
         self.statuslbl.adjustSize()
         copy_tree(patch_dir, out_dir)
 
+        # Installing Russian
+        if self.cb.isChecked():
+            self.statuslbl.setText("Installing Russian language...")
+            self.statuslbl.adjustSize()
+            self.pbar.setValue(95)
+            copy_tree(os.path.join(languages_dir, "Russian"), out_dir)
+
+        # Done
         self.statuslbl.setText("Done! The game is now playable in the folder '%s' in this directory"
-                               "\nby running 'Katawa Shoujo.exe'" % out_dir)
+                                "\nby running 'Katawa Shoujo.exe'" % out_dir)
         self.statuslbl.adjustSize()
         self.pbar.setValue(100)
+        self.lbl2.setText("")
+        self.lbl2.adjustSize()
+        self.cb.show()
 
 
 if __name__ == '__main__':
