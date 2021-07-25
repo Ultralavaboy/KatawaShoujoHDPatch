@@ -51,7 +51,7 @@ Firstly, I want to thank **Four Leaf Studios** for this awesome visual novel.
 
 Also I thank GitHub user [nagadomi](https://github.com/nagadomi) for [waifu2x](https://github.com/nagadomi/waifu2x), it really helped me a lot. 
 
-Thanks to a group of translators **Novellae Subs** and [HikariTranslations](https://hikaritranslations.tumblr.com/), I used Russian and German patches made by them respectively.
+Thanks to a group of translators **Novellae Subs** and [HikariTranslations](https://hikaritranslations.tumblr.com/), I used Russian and German translations made by them respectively.
 
 And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafitte/) for inspiration.
 
