@@ -72,9 +72,14 @@ class Patch(QWidget):
         self.pth.setGeometry(41, 174, 240, 21)
 
         # checkbox RUS
-        self.cb = QCheckBox('Install Russian', self)
-        self.cb.toggle()
-        self.cb.move(140, 206)
+        self.cb_rus = QCheckBox('Install Russian', self)
+        self.cb_rus.toggle()
+        self.cb_rus.move(140, 206)
+
+        # checkbox GER
+        self.cb_ger = QCheckBox('Install German', self)
+        self.cb_ger.toggle()
+        self.cb_ger.move(240, 206)
 
         # "Browse" button
         self.cbtn = QPushButton('Browse', self)
@@ -124,7 +129,8 @@ class Patch(QWidget):
         # "It may take a few minutes" label appear
         self.lbl2.setText('Do not close the installer until the installation \nis complete. It may take a few minutes.')
         self.lbl2.adjustSize()
-        self.cb.hide()
+        self.cb_rus.hide()
+        self.cb_ger.hide()
 
         self.statuslbl.setText("Found the base game files...")
         self.statuslbl.adjustSize()
@@ -163,11 +169,18 @@ class Patch(QWidget):
         copy_tree(patch_dir, out_dir)
 
         # Installing Russian
-        if self.cb.isChecked():
+        if self.cb_rus.isChecked():
             self.statuslbl.setText("Installing Russian language...")
             self.statuslbl.adjustSize()
-            self.pbar.setValue(95)
+            self.pbar.setValue(92)
             copy_tree(os.path.join(languages_dir, "Russian"), out_dir)
+
+        # Installing German
+        if self.cb_ger.isChecked():
+            self.statuslbl.setText("Installing German language...")
+            self.statuslbl.adjustSize()
+            self.pbar.setValue(96)
+            copy_tree(os.path.join(languages_dir, "German"), out_dir)
 
         # Done
         self.statuslbl.setText("Done! The game is now playable in the folder '%s' in this directory"
