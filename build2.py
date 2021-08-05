@@ -189,7 +189,8 @@ class Patch(QWidget):
         self.pbar.setValue(100)
         self.lbl2.setText("")
         self.lbl2.adjustSize()
-        self.cb.show()
+        self.cb_rus.show()
+        self.cb_ger.show()
 
 
 if __name__ == '__main__':
