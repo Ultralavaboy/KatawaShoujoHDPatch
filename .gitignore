@@ -135,4 +135,4 @@ rpaExtract.exe
 KatawaShoujoWindows/
 bin/
 dist/
-.rpy
+*.rpy
