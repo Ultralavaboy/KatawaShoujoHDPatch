@@ -12,7 +12,7 @@ from PyQt5.QtCore import *
 inst_dir = "C:\Program Files (x86)\Katawa Shoujo"
 patch_dir = "KatawaShoujoHD"
 languages_dir = "Languages"
-out_dir = "dist"
+out_dir = "KSHD"
 
 
 class Patch(QWidget):
@@ -131,6 +131,7 @@ class Patch(QWidget):
         self.lbl2.adjustSize()
         self.cb_rus.hide()
         self.cb_ger.hide()
+        self.btn.setEnabled(False)
 
         self.statuslbl.setText("Found the base game files...")
         self.statuslbl.adjustSize()
@@ -191,9 +192,12 @@ class Patch(QWidget):
         self.lbl2.adjustSize()
         self.cb_rus.show()
         self.cb_ger.show()
+        self.btn.setEnabled(True)
 
 
 if __name__ == '__main__':
     App = QApplication(sys.argv)
+    QFontDatabase.addApplicationFont('buildres/playtime.ttf')
+    App.setStyleSheet('QLabel{font-family: Playtime With Hot Toddies;}')
     window = Patch()
     sys.exit(App.exec())
