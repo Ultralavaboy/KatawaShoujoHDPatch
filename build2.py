@@ -198,6 +198,6 @@ class Patch(QWidget):
 if __name__ == '__main__':
     App = QApplication(sys.argv)
     QFontDatabase.addApplicationFont('buildres/playtime.ttf')
-    App.setStyleSheet('QLabel{font-family: Playtime With Hot Toddies;}')
+    App.setStyleSheet('QLabel{font-family: Playtime With Hot Toddies; line-height: 100%}')
     window = Patch()
     sys.exit(App.exec())
