@@ -59,6 +59,6 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 ## Feedback and questions
 
-If you have any questions or have an issue, firstly check the "Questions" section on project's wiki. You can find an answer there.
+If you have any questions or have an issue, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on project's wiki. You can find an answer there.
 
 If you noticed an other bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <quackgamer26@gmail.com> with tag "Katawa Feedback".
