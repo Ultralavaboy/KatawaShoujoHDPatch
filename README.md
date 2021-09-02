@@ -16,28 +16,30 @@ Languages available:
 * English
 * Spanish
 * French
-* German
 * Japanese
+* German
 * Russian
 
 ## Comparison
 
 Screenshots below are presented in their original size - 1920x1080 (with patch) and 800x600 (original).
 
-![](https://i.imgur.com/HbQRSWU.jpg)
+![](https://i.imgur.com/PMLmVxz.jpg)
 
-![](https://i.imgur.com/25lpUHw.jpg)    
+![](https://i.imgur.com/6bTCGnj.jpg)    
+
+&nbsp;  
 
 And for example, that's how Lilly's sprite appears in fullscreen mode.
 
 This wideness of an original image happens because of stretching window from 4:3 to 16:9. In HD version it looks better and naturally.
 
-![](https://i.imgur.com/nXreBJw.jpg)
+![](https://i.imgur.com/oXImooU.jpg)
 
 ## Download
 
 The patch can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases) on the right.  
-Original novel can be downloaded [from official website](https://www.katawa-shoujo.com/).
+An original novel can be downloaded from [the official website](https://www.katawa-shoujo.com/).
 
 ## License
 
@@ -59,6 +61,6 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 ## Feedback and questions
 
-If you have any questions or have an issue, firstly check the "Questions" section on project's wiki. You can find an answer there.
+If you have any questions or have an issue, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on project's wiki. You can find an answer there.
 
 If you noticed an other bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <quackgamer26@gmail.com> with tag "Katawa Feedback".
