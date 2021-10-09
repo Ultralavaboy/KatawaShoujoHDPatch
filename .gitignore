@@ -136,3 +136,5 @@ KatawaShoujoWindows/
 bin/
 dist/
 *.rpy
+KSHD/
+logKSHD.txt

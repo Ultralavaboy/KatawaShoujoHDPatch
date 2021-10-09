@@ -3,6 +3,7 @@ import urllib
 import subprocess
 import platform
 import sys
+import logging as lg
 from distutils.dir_util import copy_tree
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -125,79 +126,93 @@ class Patch(QWidget):
     def bongiorno(self):
         global inst_dir
         path = inst_dir
+        try:
+            # "It may take a few minutes" label appear
+            self.lbl2.setText('Do not close the installer until the installation \nis complete. It may take a few minutes.')
+            self.lbl2.adjustSize()
+            self.cb_rus.hide()
+            self.cb_ger.hide()
+            self.btn.setEnabled(False)
 
-        # "It may take a few minutes" label appear
-        self.lbl2.setText('Do not close the installer until the installation \nis complete. It may take a few minutes.')
-        self.lbl2.adjustSize()
-        self.cb_rus.hide()
-        self.cb_ger.hide()
-        self.btn.setEnabled(False)
-
-        self.statuslbl.setText("Found the base game files...")
-        self.statuslbl.adjustSize()
-        self.pbar.setValue(10)
-
-        # Copy the base game files to the output directory
-        self.statuslbl.setText("Copying the base game files...")
-        self.statuslbl.adjustSize()
-        self.pbar.setValue(42)
-        copy_tree(path, out_dir)
-
-        # Hand the call to rpatool to wine if not on windows
-        self.statuslbl.setText("Extracting RPA...")
-        self.statuslbl.adjustSize()
-        self.pbar.setValue(69)
-
-        user_os = platform.system()
-        rpa_path = os.path.join(path, 'game/data.rpa')
-        extract_path = os.path.join(out_dir, 'game')
-
-        if user_os == "Windows":
-            subprocess.call(['rpatool.exe', '-x', rpa_path, '-o', extract_path])
-        else:
-            subprocess.call(['wine', 'rpatool.exe', '-x', rpa_path, '-o', extract_path])
-
-
-        # Remove the rpa
-        self.statuslbl.setText("Removing redundant files...")
-        self.statuslbl.adjustSize()
-        self.pbar.setValue(87)
-        os.remove(os.path.join(out_dir, "game/data.rpa"))
-
-        # Patching
-        self.statuslbl.setText("Patching the game files...")
-        self.statuslbl.adjustSize()
-        copy_tree(patch_dir, out_dir)
-
-        # Installing Russian
-        if self.cb_rus.isChecked():
-            self.statuslbl.setText("Installing Russian language...")
+            self.statuslbl.setText("Found the base game files...")
+            lg.debug("Found the base game files")
             self.statuslbl.adjustSize()
-            self.pbar.setValue(92)
-            copy_tree(os.path.join(languages_dir, "Russian"), out_dir)
+            self.pbar.setValue(10)
 
-        # Installing German
-        if self.cb_ger.isChecked():
-            self.statuslbl.setText("Installing German language...")
+            # Copy the base game files to the output directory
+            self.statuslbl.setText("Copying the base game files...")
             self.statuslbl.adjustSize()
-            self.pbar.setValue(96)
-            copy_tree(os.path.join(languages_dir, "German"), out_dir)
+            self.pbar.setValue(42)
+            copy_tree(path, out_dir)
+            lg.debug("Copied the base game files")
 
-        # Done
-        self.statuslbl.setText("Done! The game is now playable in the folder '%s' in this directory"
-                                "\nby running 'Katawa Shoujo.exe'" % out_dir)
-        self.statuslbl.adjustSize()
-        self.pbar.setValue(100)
-        self.lbl2.setText("")
-        self.lbl2.adjustSize()
-        self.cb_rus.show()
-        self.cb_ger.show()
-        self.btn.setEnabled(True)
+            # Hand the call to rpatool to wine if not on windows
+            self.statuslbl.setText("Extracting RPA...")
+            self.statuslbl.adjustSize()
+            self.pbar.setValue(69)
+
+            user_os = platform.system()
+            lg.debug("User's platform is %s" % user_os)
+            rpa_path = os.path.join(path, 'game/data.rpa')
+            extract_path = os.path.join(out_dir, 'game')
+            lg.debug("Extracting RPA from %s to %s" % (rpa_path, extract_path))
+
+            if user_os == "Windows":
+                subprocess.call(['rpatool.exe', '-x', rpa_path, '-o', extract_path])
+            else:
+                subprocess.call(['wine', 'rpatool.exe', '-x', rpa_path, '-o', extract_path])
+            lg.debug("RPA extracted")
+
+            # Remove the rpa
+            self.statuslbl.setText("Removing redundant files...")
+            self.statuslbl.adjustSize()
+            self.pbar.setValue(87)
+            os.remove(os.path.join(out_dir, "game/data.rpa"))
+            lg.debug("Redundant files were removed")
+
+            # Patching
+            self.statuslbl.setText("Patching the game files...")
+            self.statuslbl.adjustSize()
+            copy_tree(patch_dir, out_dir)
+            lg.debug("Patched")
+
+            # Installing Russian
+            if self.cb_rus.isChecked():
+                self.statuslbl.setText("Installing Russian language...")
+                self.statuslbl.adjustSize()
+                self.pbar.setValue(92)
+                copy_tree(os.path.join(languages_dir, "Russian"), out_dir)
+                lg.debug("Russian language was installed")
+
+            # Installing German
+            if self.cb_ger.isChecked():
+                self.statuslbl.setText("Installing German language...")
+                self.statuslbl.adjustSize()
+                self.pbar.setValue(96)
+                copy_tree(os.path.join(languages_dir, "German"), out_dir)
+                lg.debug("German language was installed")
+
+            # Done
+            self.statuslbl.setText("Done! The game is now playable in the folder '%s' in this directory"
+                                    "\nby running 'Katawa Shoujo.exe'" % out_dir)
+            lg.debug("Installation complete")
+            self.statuslbl.adjustSize()
+            self.pbar.setValue(100)
+            self.lbl2.setText("")
+            self.lbl2.adjustSize()
+            self.cb_rus.show()
+            self.cb_ger.show()
+            self.btn.setEnabled(True)
+        except:
+            lg.exception('An error occured!')
+            raise
 
 
 if __name__ == '__main__':
     App = QApplication(sys.argv)
     QFontDatabase.addApplicationFont('buildres/playtime.ttf')
     App.setStyleSheet('QLabel{font-family: Playtime With Hot Toddies; line-height: 100%}')
+    lg.basicConfig(filename='logKSHD.txt', level=lg.DEBUG, format='%(asctime)s %(message)s')
     window = Patch()
+    lg.debug('The installer started successfully.')
     sys.exit(App.exec())
