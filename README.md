@@ -7,7 +7,7 @@ __Enjoy a good story in a good quality!__
 ## Description
 Katawa Shoujo is a visual novel by Four Leaf Studios that tells the story of a young man and five young women living with varying disabilities. 
 
-The game has been in development since 2007, and it was released in January 4, 2012. It was quite a long time ago, wasn’t it?  
+The game had been in development since 2007, and it was released in January 4, 2012. It was quite a long time ago, wasn’t it?  
 The official game is available only in resolution 800x600. It’s actually not that good for *visual* novel in 2021.
 
 Katawa Shoujo HD patch is going to give this (g)old story a HD shell.
