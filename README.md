@@ -7,7 +7,7 @@ __Enjoy a good story in a good quality!__
 ## Description
 Katawa Shoujo is a visual novel by Four Leaf Studios that tells the story of a young man and five young women living with varying disabilities. 
 
-The game had been in development since 2007, and it was released in January 4, 2012. It was quite a long time ago, wasn’t it?  
+The game had been in development since 2007, and it was released on January 4, 2012. It was quite a long time ago, wasn’t it?  
 The official game is available only in resolution 800x600. It’s actually not that good for *visual* novel in 2021.
 
 Katawa Shoujo HD patch is going to give this (g)old story a HD shell.
@@ -51,7 +51,7 @@ If you're a right owner and have problems with stuff in this project, email me: 
 
 Firstly, I want to thank **Four Leaf Studios** for this awesome visual novel.  
 
-Also I thank GitHub user [nagadomi](https://github.com/nagadomi) for [waifu2x](https://github.com/nagadomi/waifu2x), it really helped me a lot. 
+Also, I thank GitHub user [nagadomi](https://github.com/nagadomi) for [waifu2x](https://github.com/nagadomi/waifu2x), it really helped me a lot. 
 
 Thanks to a group of translators **Novellae Subs** and [HikariTranslations](https://hikaritranslations.tumblr.com/), I used Russian and German translations made by them respectively.
 
@@ -61,6 +61,6 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 ## Feedback and questions
 
-If you have any questions or issues, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on project's wiki. Most likely, you will find an answer there.
+If you have any questions or issues, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on the project's wiki. Most likely, you will find an answer there.
 
-If you noticed an other bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <georgeleto@yandex.ru> with tag "Katawa Feedback".
+If you noticed another bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <georgeleto@yandex.ru> with tag "Katawa Feedback".
