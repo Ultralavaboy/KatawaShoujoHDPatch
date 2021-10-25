@@ -45,7 +45,7 @@ An original novel can be downloaded from [the official website](https://www.kata
 
 This project is not associated with Four Leaf Studios, and it was made for non-commercial use. We are not developers or owners of the rights for Katawa Shoujo.  
 All rights to published pictures and music belong to their authors or legal owners. Everything else can be found in LICENSE.txt and Game Manual.pdf files.  
-If you're a right owner and have problems with stuff in this project, email me: <quackgamer26@gmail.com>.
+If you're a right owner and have problems with stuff in this project, email me: <georgeleto@yandex.ru>.
 
 ## Arigatou’s
 
@@ -63,4 +63,4 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 If you have any questions or issues, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on project's wiki. Most likely, you will find an answer there.
 
-If you noticed an other bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <quackgamer26@gmail.com> with tag "Katawa Feedback".
+If you noticed an other bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <georgeleto@yandex.ru> with tag "Katawa Feedback".
