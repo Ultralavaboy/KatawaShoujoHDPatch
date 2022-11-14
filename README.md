@@ -48,7 +48,7 @@ All rights to published pictures and music belong to their authors or legal owne
 If you're a right owner and have problems with stuff in this project, email me: <georgeleto@yandex.ru>.
 
 ## MacOS
-GitHub user [112c](https://github.com/112cxyz) made a macOS version of the game!
+GitHub user [112c](https://github.com/112cxyz) made a macOS version of the game's patch!
 
 [Download](https://www.icloud.com/attachment/?u=https%3A%2F%2Fcvws.icloud-content.com%2FB%2FAUaatt9uoMGf4kj8IGOxjSFzAe0cASctMQMWC_5hphZtFaOMO4xUC1LT%2F%24%7Bf%7D%3Fo%3DAs05EWhySBZcppgJO1_cLZNHcQXPFPtTGQ4IdOXwqH-A%26v%3D1%26x%3D3%26a%3DCAogPvy9w84xQsDUOmEFlhGaw-ZMsU1yw2wnVtjr2y2Z8lISbxDyy4ecxzAY8tuC8NAwIgEAUgRzAe0cWgRUC1LTaif6E1wIYrRqjcDObRKHEqFrs_RHdSAxFmTjN7Uy_8Y8hvKWGIWVhidyJx2cgnlwDm4AlNEqBuiB6q0kRAszz3RLWd7SIBh1qgGIL8f8k0TMQQ%26e%3D1670977203%26fl%3D%26r%3D2C881409-0CD4-466A-9C3A-81985B813B2C-1%26k%3D%24%7Buk%7D%26ckc%3Dcom.apple.clouddocs%26ckz%3DiCloud.me.damir.dropover-mac%26p%3D60%26s%3DCM4I-0e-ucmj65zyErglbWBQrLk&uk=ee4_yR_OR2mmrD85ev4czQ&f=Katawa%2520Shoujo.zip&sz=801800822)
 
