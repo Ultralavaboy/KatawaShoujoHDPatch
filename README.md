@@ -38,7 +38,7 @@ This wideness of an original image happens because of stretching window from 4:3
 
 ## Download
 
-The patch can be downloaded from section ["Releases"](https://github.com/letow/KatawaShoujoHD/releases/latest) on the right.  
+The patch can be downloaded from section ["Releases"](https://github.com/Ultralavaboy/KatawaShoujoHD/releases/latest) on the right.  
 An original novel can be downloaded from [the official website](https://www.katawa-shoujo.com/).
 
 ## License
@@ -61,6 +61,6 @@ And I say *merci* to [Valjean_Lafitte](https://www.reddit.com/user/Valjean_Lafit
 
 ## Feedback and questions
 
-If you have any questions or issues, firstly check the ["Questions"](https://github.com/letow/KatawaShoujoHDPatch/wiki/Questions) section on the project's wiki. Most likely, you will find an answer there.
+If you have any questions or issues, firstly check the ["Questions"](https://github.com/Ultralavaboy/KatawaShoujoHDPatch/wiki/Questions) section on the project's wiki. Most likely, you will find an answer there.
 
 If you noticed another bug/mistake, caught a traceback or have any suggestions, you can leave an issue here OR email me on <georgeleto@yandex.ru> with tag "Katawa Feedback".
