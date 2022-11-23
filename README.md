@@ -50,9 +50,11 @@ If you're a right owner and have problems with stuff in this project, email me: 
 ## MacOS
 GitHub user [112c](https://github.com/112cxyz) made a macOS version of the game's patch!
 
-[Download](https://dropover.cloud/09ebe9)
+[Download](https://dropover.cloud/0b5671)
 
 The macOS uses renpy 6.99 which has a rewritten save engine and cant load older saves, you will still get the widgets on the main menu from the old game. The game also has a chance of showing a error when quitting but can be ignored by pressing the quit button again or on the error.
+
+(Last Updated Wednesday 23 November 2022)
 
 
 ## Arigatou’s
